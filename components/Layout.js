@@ -14,29 +14,29 @@ function Layout({ children, home }) {
             </Head>
             <header className={styles.header}>
                 {home ? (
-                <>
-                    <img
-                    src="/images/profile.png"
-                    className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-                    alt={name}
-                    />
-                    <h1 className={utilStyles.heading2Xl}>{name}</h1>
-                </>
+                    <>
+                        <img
+                            src="/images/profile.png"
+                            className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
+                            alt={name}
+                        />
+                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                    </>
                 ) : (
-                <>
-                    <Link href="/">
-                    <img
-                        src="/images/profile.png"
-                        alt=""
-                        className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                    />
-                    </Link>
-                    <h2 className={utilStyles.headingLg}>
+                    <>
                         <Link href="/">
-                            <a className={utilStyles.colorInherit}>{name}</a>
+                            <img
+                                src="/images/profile.png"
+                                className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                                alt={name}
+                            />
                         </Link>
-                    </h2>
-                </>
+                        <h2 className={utilStyles.headingLg}>
+                            <Link href="/">
+                                <a className={utilStyles.colorInherit}>{name}</a>
+                            </Link>
+                        </h2>
+                    </>
                 )}
             </header>
             <main>{children}</main>
